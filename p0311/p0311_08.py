@@ -18,5 +18,7 @@ var1 = int(input('첫번째 숫자를 입력하세요. > '))
 var2 = int(input('두번째 숫자를 입력하세요. > '))
 
 aaa =0 # 전역 변수
+# 호출
 data = calc(var1,var2,a_input)
+# 출력
 print('결과값 : ', data)
