@@ -11,7 +11,7 @@ while True:
     c_list = content.split(',')
     c_list[4] = int(c_list[4])
     sum += c_list[4]
-    print(c_list,len(c_list))
+    # print(c_list,len(c_list))
 
 print(sum)
 f.close()
