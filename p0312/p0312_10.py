@@ -3,8 +3,8 @@ import random
 card_list = []
 shape_list = ['SPADE','DIAMOND','HEART','CLOVER']
 num_list = [0]*13
-for i in range(1,14):
-    num_list[i-1] = i
+for i in range(13):
+    num_list[i] = i+1
     # print(num_list)
 num_list[0] = 'A'
 num_list[10] = 'J'
@@ -23,7 +23,7 @@ for i in shape_list:
        cnt += 1 
     print(card_list)
 
-def card_creat():
+def card_create():
     pass
 
 def card_shuffle():
@@ -46,7 +46,7 @@ while True:
     choice = int(input('원하는 번호를 입력하세요. > '))
 
     if choice == 1:
-        card_creat()
+        card_create()
         
     elif choice == 2:
         card_shuffle()
