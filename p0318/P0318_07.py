@@ -14,7 +14,7 @@ class Tv():
 c1 = Tv ('white','Smart TV',100)
 c1.tv_print()
 
-# Tv.serial_no = 100
+Tv.serial_no = 100
 
 c2 = Tv('black','FHD TV',70)
 #c2.serial_no = 2
