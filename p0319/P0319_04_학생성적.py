@@ -183,26 +183,7 @@ def stu_main_print():
     if not choice.isdigit():
         print('숫자만 입력 가능합니다.')
     choice = int(choice)
-
-# 학생성적입력
-def stu_input():
-    while True:
-        name = input(f'{len(students)+1}번째 학생이름을 입력하세요.(0. 취소) > ')
-        if name == '0':
-            print('취소')
-            break
-        kor = int(input('국어점수를 입력하세요. '))
-        eng = int(input('영어점수를 입력하세요. '))
-        math = int(input('수학점수를 입력하세요. '))
-        students.append(Student(name,kor,eng,math))
-        print('입력 데이터 :',Student)
-        
-
-while True:
-    stu_main_print()
-    
-    stu_input()
-'''  
+'''
     
     
     
