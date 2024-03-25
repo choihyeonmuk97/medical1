@@ -17,7 +17,7 @@ print('검색비율 :',td_list[2].text)
 print('현재가 :',td_list[3].text)
 
 
-# print(samsung.find('a',{'class':'tltle'}).text)
+# print(samsung.find('a',{'class':'tltle'}).text) 
 # print(len(tr_list))
 # print(tr_list[2])
 
