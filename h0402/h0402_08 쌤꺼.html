@@ -52,7 +52,7 @@
             font-size:24px; color:#fff; font-weight: 700; letter-spacing: -1px;
         }
         #banner .title div{ color:white;
-            width:190px; height:55px; border:1px solid white;
+            width:192px; height:55px; border:1px solid white;
             margin:48px auto 0; line-height: 55px;
         }
         #content{ width:1290px; margin:0 auto;}
@@ -64,9 +64,16 @@
         }
         .econt1 div{width:70px; height:45px; background: #907559;
         position:relative; left:10px; top:10px; font-size:15px; color:white;
-    font-weight: 600; line-height: 45px; text-align: center; }
+        font-weight: 600; line-height: 45px; text-align: center; }
         .e_img1{ background: url('imgs/L2024031914103461580_00.jpg') -36px -15px no-repeat;
-                 background-size: 120%; }
+                 background-size: 120%;}
+        .e_img:hover{animation: img_zoom 1s; 
+                    animation-fill-mode: forwards;}
+        @keyframes img_zoom{
+            from{background-size: 120%;}
+            to{background-size: 140%; background-position: -80px -45px;}
+        }
+
         .e_img2{ background: url('imgs/L2023071017281318970_00.jpg') -36px -15px no-repeat;
                  background-size: 120%;}
         .e_img3{ background: url('imgs/L2024020816060892970_00.jpg') -36px -15px no-repeat;
@@ -147,7 +154,7 @@
                 <h2>EVENT</h2>
                 <div id="eventCon">
                     <div class="econt">
-                        <div class="econt1 e_img1">
+                        <div class="econt1 e_img e_img1">
                             <div>이벤트</div>
                         </div>
                         <div class="econt2">
@@ -156,7 +163,7 @@
                         </div>
                     </div>
                     <div class="econt">
-                        <div class="econt1 e_img2">
+                        <div class="econt1 e_img e_img2">
                             <div>이벤트</div>
                         </div>
                         <div class="econt2">
@@ -165,7 +172,7 @@
                         </div>
                     </div>
                     <div class="econt">
-                        <div class="econt1 e_img3">
+                        <div class="econt1 e_img e_img3">
                             <div>이벤트</div>
                         </div>
                         <div class="econt2">
@@ -180,7 +187,7 @@
                 <h2>PACKAGE</h2>
                 <div id="eventCon">
                     <div class="econt">
-                        <div class="econt1 e_img4">
+                        <div class="econt1 e_img e_img4">
                         </div>
                         <div class="econt2">
                             <p class="tit">스윗 골드 에디션</p>
@@ -188,7 +195,7 @@
                         </div>
                     </div>
                     <div class="econt">
-                        <div class="econt1 e_img5">
+                        <div class="econt1 e_img e_img5">
                         </div>
                         <div class="econt2">
                             <p class="tit"> 베이비문 포레스트 (with 압소바)</p>
@@ -196,7 +203,7 @@
                         </div>
                     </div>
                     <div class="econt">
-                        <div class="econt1 e_img6">
+                        <div class="econt1 e_img e_img6">
                         </div>
                         <div class="econt2">
                             <p class="tit">꼬마 숲탐험 패키지</p>
