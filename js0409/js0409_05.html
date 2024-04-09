@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    <style>
+        div{width: 500px; height: 200px; border: 3px solid black;}
+    </style>
+    <script>
+        function btn(){
+            document.querySelector('#content').value;
+            console.log("content : ",document.querySelector('#content').value);
+            // innerText : 문자로 태그에 입력
+            // document.querySelector('#main').innerText = document.querySelector('#content').value;
+            // innerHTML : 태그로 태그 안에 입력
+            // document.querySelector('#main').innerHTML = '<h2>안녕하세요.</h2>';
+
+            // select 1901~2024년까지, 1~12월, 1~31일까지 반복
+            var html_data = "";
+            var html_data1 = "";
+            var html_data2 = "";
+            for(var i=1901;i<2025;i++){
+                html_data += "<option value="+i+">"+i+"년</option>";
+                //html_data += `<option value='${i}'>${i}년</option>`;
+            }
+            for(var j=1;j<13;j++){
+                html_data1 += "<option value="+j+">"+j+"월</option>";
+            }
+            for(var k=1;k<32;k++){
+                html_data2 += "<option value="+k+">"+k+"일</option>";
+            }
+
+            console.log(html_data);
+
+            document.querySelector('#year').innerHTML = html_data;
+            document.querySelector('#month').innerHTML = html_data1;
+            document.querySelector('#day').innerHTML = html_data2;
+
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+    <br>
+    <label>글자를 적으시오.</label>
+    <input type="text" name="content" id="content">
+    <br><br> 
+    <button onclick="btn()">저장</button>
+
+    <script>
+        function birthBtn(){
+            alert("년도 : "+document.querySelector('#year').value);
+        }
+
+    </script>
+
+    <h2>생년월일</h2>
+    <select id="year">
+        <option value="1901">1901년</option>
+    </select>
+
+    <select id="month">
+        <option value="1">1월</option>
+    </select>
+
+    <select id="day">
+        <option value="1">1일</option>
+    </select>
+    <button onclick="birthBtn()">데이터 읽기</button>
+</body>
+</html>
