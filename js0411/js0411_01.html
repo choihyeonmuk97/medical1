@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title>jquery</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        div{width: 500px; height: 200px; border: 3px solid black;
+            background: yellow; font-size: 25px; text-align: center;
+            overflow: auto;}
+    </style>
+    <script>
+        $(function(){ // 제이쿼리 선언
+            $("#txt").keyup(function(){
+                if(window.event.keyCode == 13){
+                    console.log("enter 키 누름");
+                    $("#main").append("나 : "+$("#txt").val()+"<br>");
+                    $("#txt").val(""); // input의 글자를 지움
+                }
+            })
+        });
+        
+        function dBtn(){
+            // document.querySelector("#main").style.background = "blue";
+            // $("#main").css("background","blue");
+
+            // 자바스크립트 input 내용 - .value 
+            // 제이쿼리 input 내용 - .val() / 태그에 글자넣기 - .text()
+
+            // keyCode - 13 : enter
+            if(window.event.keyCode == 13){
+                console.log("enter 키 누름");
+                $("#main").append("나 : "+$("#txt").val()+"<br>");
+                $("#txt").val(""); // input의 글자를 지움
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="main"></div>
+    <input type="text" name="txt" id="txt">
+    <button>확인</button>
+
+</body>
+</html>
