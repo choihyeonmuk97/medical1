@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title>jquery</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        div{width: 500px; height: 200px; border: 3px solid black;
+            background: yellow; font-size: 25px; text-align: center;
+            overflow: auto;}
+    </style>
+    <script>
+                 
+    </script>
+</head>
+<body>
+    <div id="main" style="color: blue;"></div>
+    <input type="text" name="txt" id="txt">
+    <button id="dBtn">확인</button>
+<script>
+    /* 자바스크립트 이벤트
+    document.querySelector("#txt").addEventListener('keyup',function(){
+        if(window.event.keyCode == 13){
+            $("#main").append("나 : "+$("#txt").val()+"<br>");
+            $("#txt").val(""); // input의 글자를 지움
+        
+        }
+    });
+    */
+
+    // 제이쿼리
+    $(function(){
+        $("#txt").keyup(function(){
+            if(window.event.keyCode == 13){
+                $("#main").append("나 : "+$("#txt").val()+"<br>");
+                $("#txt").val(""); // input의 글자를 지움
+            
+            }
+        });
+    });
+</script>
+</body>
+</html>

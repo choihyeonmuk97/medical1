@@ -1,7 +1,7 @@
 import requests
 
 # 웹에 접근하여 html 소스를 가져옴
-res = requests.get('https://www.melon.com/')
+res = requests.get('https://www.google.com/')
 
 print(res) # 200 : 정상 / 403,404 : 페이지 없음 / 500 : 프로그램 에러
 print('코드 :',res.status_code) # 리턴한 소스의 코드값 출력
