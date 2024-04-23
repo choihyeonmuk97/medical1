@@ -17,7 +17,7 @@ $(function(){
         let o_math = 0;
         // 최초 데이터 불러오기
         $.ajax({
-            url:"http://127.0.0.1:5500/js0417/json/stu_score.json",
+            url:"http://192.168.0.147:5500/z03_javascript_class/js0417/json/stu_score.json",
             data:{},
             type:"get",
             dataType:"json",

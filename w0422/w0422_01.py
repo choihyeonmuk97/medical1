@@ -21,7 +21,7 @@ soup = BeautifulSoup(res.text,'lxml')
 
 # print(soup.find("div",{"class":"section--itemcard"}))
 
-# title = (soup.find("span",{"class":"text--title"}).text)
+# title = (soup.find("span",{"class":"text--title"}).text)  찾기는 잘 찾았는데..
 # print("제품명 :",title)
 
 # price = (soup.find("strong",{"class":"text__price-seller"}).text)
