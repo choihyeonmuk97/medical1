@@ -22,7 +22,7 @@ soup = BeautifulSoup(browser.page_source,'lxml')
 # res.raise_for_status()
 # soup = BeautifulSoup(res.text,'lxml')
 
-h = soup.find('table',{'class':'tbl_type1'})
+h = soup.find('table',{'class':'tbl_type1'}) # tbody로 들어왔으면 더 쉬웠겠다 !!
 citys = h.find_all('tr')
 print('도시 수 :',len(citys))
 
