@@ -24,31 +24,42 @@ soup = BeautifulSoup(browser.page_source,'lxml')
 
 h = soup.find('table',{'class':'tbl_type1'}) # tbody로 들어왔으면 더 쉬웠겠다 !!
 citys = h.find_all('tr')
-print('도시 수 :',len(citys))
+# print('tr 수 :',len(citys))
 
 seoul = citys[4].find('td',{'class':"td_admin"}).text
 s_h = citys[4].find_all('td')[2].text
-print(seoul)
-print('인구 :',s_h)
-print('-'*50)
+print(seoul,'인구 :',s_h)
 
 incheon = citys[7].find('td',{'class':'td_admin'}).text
 i_h = citys[7].find_all('td')[2].text
-print(incheon)
-print('인구 :',i_h)
-print('-'*50)
+print(incheon,'인구 :',i_h)
 
 ggd = citys[12].find('td',{'class':'td_admin'}).text
 g_h = citys[12].find_all('td')[2].text
-print(ggd)
-print('인구 :',g_h)
-print('-'*50)
+print(ggd,'인구 :',g_h)
 
 nums = int(s_h.replace(',',''))
 numi = int(i_h.replace(',',''))
 numg = int(g_h.replace(',',''))
 print('합계 인구 :','{:,}'.format(nums+numi+numg))
+print('-'*50)
 
+'''--------------------------------셀레니움------------------------------------'''
 
+seoul1 = browser.find_element(By.XPATH,'//*[@id="contextTable"]/tbody/tr[2]/td[2]').text
+s_h1 = browser.find_element(By.XPATH,'//*[@id="contextTable"]/tbody/tr[2]/td[3]').text
+incheon1 = browser.find_element(By.XPATH,'//*[@id="contextTable"]/tbody/tr[5]/td[2]').text
+i_h1 = browser.find_element(By.XPATH,'//*[@id="contextTable"]/tbody/tr[5]/td[3]').text
+ggd1 = browser.find_element(By.XPATH,'//*[@id="contextTable"]/tbody/tr[10]/td[2]').text
+g_h1 = browser.find_element(By.XPATH,'//*[@id="contextTable"]/tbody/tr[10]/td[3]').text
+
+sh1 = int(s_h1.replace(',',''))
+ih1 = int(i_h1.replace(',',''))
+gh1 = int(g_h1.replace(',',''))
+
+print(seoul1,"인구 :",s_h1)
+print(incheon1,"인구 :",i_h1)
+print(ggd1,"인구 :",g_h1)
+print('합계 인구 :','{:,}'.format(sh1+ih1+gh1))
 
 
