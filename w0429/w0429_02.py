@@ -105,11 +105,10 @@ print(elem[0].text)
 # 스크롤 이동 
 prev_height = browser.execute_script('return document.body.scrollHeight')
 print('최초 높이 :',prev_height)
-time.sleep(3)
 
 # 스크롤이 끝까지 내려가기 위해 반복문 사용
 while True:
-    browser.execute_script("Window.scrollTo(0,document.body.scrollHeight)")
+    browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
     time.sleep(2)
     # 스크롤 높이 체크
     curr_height = browser.execute_script('return document.body.scrollHeight')
