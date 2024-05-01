@@ -222,17 +222,17 @@ from(select * from lotte_product order by std_ym) b -- b는 날짜 asc로 미리
 select * from stu_score
 order by no;
 
--- kor 점수가 높은 순으로 21~30등 까지
+-- kor 점수가 높은 순으로 21~30등 까지 (풀이 전에 논파함ㅋ)
 select rnum, name,kor from
 (select rownum rnum, c.* from
 (select name,kor from stu_score order by kor desc) c) 
 where rnum >=21 and rnum <=30
 ;
 
-select name,kor from stu_score order by kor desc;
-
-select rownum rnum, c.* from
-(select name,kor from stu_score order by kor desc) c;
+--select name,kor from stu_score order by kor desc;
+--
+--select rownum rnum, c.* from
+--(select name,kor from stu_score order by kor desc) c; -> rnum_1 이유 확인용
 
 
 select * from stu_score 
