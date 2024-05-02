@@ -37,7 +37,7 @@ for i in range(5):
     soup = BeautifulSoup(browser.page_source,"lxml")
     hotels = soup.find_all("a",{"class":"gc-thumbnail-type-seller-card css-wels0m"})
     print("전체 개수 : ",len(hotels))
-    time.sleep(10)
+    time.sleep(20)
     
     for idx,hotel in enumerate(hotels):
         print(f'[{idx+1} 번째]')    
