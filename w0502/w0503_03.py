@@ -89,6 +89,7 @@ for div in divs[0:5]:
         price = int(price.text.replace(',',''))
         print('가격 :',price)
     except:
+        print('가격 : 0')
         continue
 
 
